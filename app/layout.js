@@ -1,5 +1,6 @@
 import "@styles/globals.css";
-import Nav from "@app/components/Nav";
+import Nav from "@components/Nav";
+import AuthProvider from "@components/AuthProvider";
 
 export const metadata = {
   title: "my everything app",
@@ -11,7 +12,9 @@ const RootLayout = ({ children }) => {
     <html lang="en">
       <body>
         <Nav />
+        <AuthProvider>
         <main>{children}</main>
+        </AuthProvider>
       </body>
     </html>
   );

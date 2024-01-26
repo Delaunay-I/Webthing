@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@public/logo.svg";
+import { getServerSession } from "next-auth";
 
-const Nav = () => {
+import logo from "@public/logo.svg";
+import { options } from "../app/api/auth/[...nextauth]/options";
+
+const Nav = async () => {
+  const session = await getServerSession(options);
   return (
     <nav className="dark:bg-slate-800">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
@@ -12,12 +16,13 @@ const Nav = () => {
             <span>my app</span>
           </a>
         </div>
-        <div>
+        <div className="flex gap-10">
           <Link href="/">Home</Link>
-          <Link href="/createuser">Create User</Link>
-          <Link href="/clientmember">Client Member</Link>
-          <Link href="/member">Member</Link>
+          <Link href="/login">Login</Link>
+          <Link href="/profile">Profile</Link>
+          <Link href="/ClientProfile">Client Profile</Link>
           <Link href="/public">Public</Link>
+          {session ? (<Link href="/api/auth/signout?callbackUrl=/">Logout</Link>) : (<Link href="/api/auth/signin?callbackUrl=/">Login</Link>)}
         </div>
       </div>
     </nav>

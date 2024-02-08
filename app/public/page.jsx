@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Public = () => {
   const page_nums = [1, 2, 3, 4, 5];
 
@@ -87,6 +89,9 @@ const Public = () => {
       <button className="bg-emerald-600 py-3 px-4 hover:px-6 transition-all mx-3">Two</button>
       <button className="bg-emerald-600 py-3 px-4 hover:px-7 transition-all mx-3">Three</button>
 
+      
+        <br/>
+        <button className='py-3 px-4 bg-amber-700 m-4'><Link href="/public/text">Next practice on Text styles</Link></button>
     </section>
   );
 };

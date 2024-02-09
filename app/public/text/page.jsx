@@ -1,8 +1,7 @@
-import React from "react";
 
 const Text = () => {
   return (
-    <section className="ml-3">
+    <section>
       <h1 className="m-3 text-center">Practice on text styles</h1>
       <br />
       <p className="font-arial text-lg leading-6 font-bold w-[280px] mb-2">

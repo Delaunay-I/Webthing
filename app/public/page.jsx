@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const Public = () => {
   const page_nums = [1, 2, 3, 4, 5];
 
   return (
-    <section className="bg-gray-100 p-12">
+    <section className="text-white">
       <div className="mb-6 bg-emerald-400 w-[45em] mx-10 border-y-4 px-3 py-4">
         Hello this is my dive that I want to play with its box model.
       </div>
@@ -14,8 +14,7 @@ const Public = () => {
 
       <button
         className="bg-black px-4 py-3
-      hover:opacity-80 transition
-    "
+      hover:opacity-80 transition"
       >
         Request Now
       </button>
@@ -85,13 +84,20 @@ const Public = () => {
         Shadow
       </button>
 
-      <button className="bg-emerald-600 py-3 px-4 hover:px-5 transition-all mx-3">One</button>
-      <button className="bg-emerald-600 py-3 px-4 hover:px-6 transition-all mx-3">Two</button>
-      <button className="bg-emerald-600 py-3 px-4 hover:px-7 transition-all mx-3">Three</button>
+      <button className="bg-emerald-600 py-3 px-4 hover:px-5 transition-all mx-3">
+        One
+      </button>
+      <button className="bg-emerald-600 py-3 px-4 hover:px-6 transition-all mx-3">
+        Two
+      </button>
+      <button className="bg-emerald-600 py-3 px-4 hover:px-7 transition-all mx-3">
+        Three
+      </button>
 
-      
-        <br/>
-        <button className='py-3 px-4 bg-amber-700 m-4'><Link href="/public/text">Next practice on Text styles</Link></button>
+      <br />
+      <button className="py-3 px-4 bg-amber-700 m-4">
+        <Link href="/public/text">Next practice on Text styles</Link>
+      </button>
     </section>
   );
 };

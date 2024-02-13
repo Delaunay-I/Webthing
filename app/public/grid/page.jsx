@@ -105,7 +105,9 @@ const Grid = () => {
             <p className="text-neutral-500 mb-[5px]">Sleepy cat</p>
             <p className="text-neutral-500 text-[14px]">Popular</p>
           </div>
-          <button className="bg-blue-500 rounded px-4 py-2 text-white font-bold">Follow</button>
+          <button className="bg-blue-500 rounded px-4 py-2 text-white font-bold">
+            Follow
+          </button>
         </div>
 
         <div className="flex items-center">
@@ -118,7 +120,60 @@ const Grid = () => {
             <p className="text-neutral-500 mb-[5px]">Happy Cat</p>
             <p className="text-neutral-500 text-[14px]">Popular</p>
           </div>
-          <button className="bg-blue-500 rounded px-4 py-2 text-white font-bold">Follow</button>
+          <button className="bg-blue-500 rounded px-4 py-2 text-white font-bold">
+            Follow
+          </button>
+        </div>
+      </div>
+
+      <div className="flex my-5 justify-between bg-purple-600 p-3 items-center">
+        <div className="font-bold text-[18px]">Home</div>
+        <input
+          type="text"
+          placeholder="Search"
+          className="rounded-full px-[17px] py-2 w-3/5 bg-slate-100 text-black mx-4"
+        />
+        <button className="border px-4 py-2 rounded">Download</button>
+      </div>
+
+      <h1 className="font-bold text-3xl my-3">Nested FlexBox exercises</h1>
+
+      <div className="flex my-4 h-[50px]">
+        <div className="bg-purple-500 basis-[100px] flex justify-center items-center">
+          <div className="bg-black text-white">item1</div>
+        </div>
+        <div className="bg-blue-300 basis-[200px]"></div>
+      </div>
+
+      <div className="flex h-[80px]">
+        <div className="bg-purple-500 basis-[100px]"></div>
+        <div className="bg-blue-300 basis-[200px]">
+          <div>row1</div>
+          <div className="flex justify-between">
+            <div className="bg-black text-white">row2</div>
+            <div className="bg-black text-white">row2</div>
+          </div>
+        </div>
+      </div>
+
+      <h1 className="font-bold text-3xl my-3 text-red-700">
+        Challenging exercises
+      </h1>
+
+      <div className="border w-[400px] pl-4 pt-2 pb-2 px-4 rounded bg-slate-100 text-black shadow-lg mt-5 ml-5">
+        <p className="text-slate-600 text-[14px] mb-5">ALL INBOXES</p>
+        <div className="flex items-center mb-5">
+          <Image src={cat1} className="w-12 h-12 rounded-full mr-2" />
+          <div className="basis-full">
+            <div className="flex justify-between items-center mb-1">
+              <p className="font-bold text-[18px]">Chewy Promotions</p>
+              <p className="text-slate-600 text-sm">4:48 pm</p>
+            </div>
+            <p className="font-bold mb-1">Biggest sale of the year!</p>
+            <p className="text-slate-600">
+              Hey there! We're writing to tell you about...
+            </p>
+          </div>
         </div>
       </div>
     </section>

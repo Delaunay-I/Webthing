@@ -160,19 +160,60 @@ const Grid = () => {
         Challenging exercises
       </h1>
 
-      <div className="border w-[400px] pl-4 pt-2 pb-2 px-4 rounded bg-slate-100 text-black shadow-lg mt-5 ml-5">
+      <div className="border w-[400px] pt-2 pb-2 px-4 rounded bg-slate-100 text-black shadow-lg mt-5 ml-5">
         <p className="text-slate-600 text-[14px] mb-5">ALL INBOXES</p>
         <div className="flex items-center mb-5">
           <Image src={cat1} className="w-12 h-12 rounded-full mr-2" />
           <div className="basis-full">
-            <div className="flex justify-between items-center mb-1">
+            <div className="flex justify-between items-center">
               <p className="font-bold text-[18px]">Chewy Promotions</p>
               <p className="text-slate-600 text-sm">4:48 pm</p>
             </div>
-            <p className="font-bold mb-1">Biggest sale of the year!</p>
+            <p className="font-bold">Biggest sale of the year!</p>
             <p className="text-slate-600">
               Hey there! We're writing to tell you about...
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="border rounded w-[450px] bg-slate-100 shadow-lg text-black my-10 py-2 px-4">
+        <p className="text-slate-600 text-[14px] mb-5">ALL INBOXES</p>
+        <div className="flex mb-5">
+          <Image src={cat1} className="w-[50px] h-[50px] rounded-full mr-2" />
+          <div className="basis-full">
+            <div className="flex justify-between items-center">
+              <p className="font-bold text-[18px]">Chewy Promotions</p>
+              <p className="text-slate-600">4:48 PM</p>
+            </div>
+            <p className="font-bold">Biggest sale of the year!</p>
+            <p className="text-slate-600">
+              Hey there! We're writing to tell you about...
+            </p>
+          </div>
+        </div>
+
+        <div className="flex mb-5">
+          <Image src={cat2} className="w-[50px] h-[45px] rounded-full mr-2 object-cover object-top" />
+          <div className="basis-full">
+            <div className="flex justify-between items-center">
+              <p className="font-bold text-[18px]">Best Buy</p>
+              <p className="text-slate-600">12:32 PM</p>
+            </div>
+            <p className="font-bold">Your Best Buy eReceipt</p>
+            <p className="text-slate-600">Thank you for shopping at Best Buy, here is...</p>
+          </div>
+        </div>
+
+        <div className="flex mb-5">
+          <Image src={cat3} className="w-[50px] h-[45px] rounded-full mr-2 object-cover object-top" />
+          <div className="basis-full">
+            <div className="flex justify-between items-center">
+              <p className="font-bold text-[18px]">Netflix</p>
+              <p className="text-slate-600">9:00 AM</p>
+            </div>
+            <p className="font-bold">Here's what's coming soon to Netflix</p>
+            <p className="text-slate-600">Brand new movies and shows, old favorites...</p>
           </div>
         </div>
       </div>

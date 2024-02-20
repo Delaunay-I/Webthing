@@ -217,6 +217,22 @@ const Grid = () => {
           </div>
         </div>
       </div>
+
+
+      <div className="flex bg-slate-100 text-black px-4 py-3 w-[450px] rounded text-[17px]">
+        <Image src={cat1} className="w-[50px] h-[50px] mr-2 rounded-full"/>
+        <div>
+          <p className="font-bold">supersimple.dev <span className="text-slate-600 font-semibold">@SuperSimpleDev</span></p>
+          <p>What is backend web development? A complete overview. New video is up!</p>
+          <div className="flex rounded-xl border border-gray-300 mt-3">
+            <div className="bg-gray-300 w-[150px] mr-2 rounded-l-xl"></div>
+            <div className="py-2">
+              <p className="text-slate-600 font-semibold">youtube.com</p>
+              <p className="font-semibold">Backend web development - a complete overview (2021)</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

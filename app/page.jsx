@@ -23,6 +23,15 @@ const Home = () => {
         >
           Grid
         </Link>
+
+        <Link
+          href="/public/position"
+          className="bg-amber-600 px-3 py-3 rounded-2xl shadow-lg
+      hover:opacity-80  text-white font-bold 
+      transition"
+        >
+          Position
+        </Link>
       </div>
     </section>
   );

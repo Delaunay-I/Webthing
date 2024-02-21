@@ -26,7 +26,8 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
 }
 

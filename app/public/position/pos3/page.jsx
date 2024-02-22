@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import cat1 from "@public/cat1.png";
 import cat2 from "@public/cat2.jpg";
@@ -6,8 +7,8 @@ import cat3 from "@public/cat3.jpg";
 
 const page = () => {
   return (
-    <section>
-      <div className="bg-white fixed inset-x-0 h-[80px] flex items-center justify-between px-16">
+    <section className="pl-[350px] pt-[80px]">
+      <div className="bg-white fixed inset-x-0 top-[82px] h-[80px] flex items-center justify-between px-16">
         <div className="flex items-center">
           <Image src={cat1} className="w-12 h-12 rounded-full mr-3" />
           <p className="text-black text-lg font-bold">Oliver Cat</p>
@@ -45,6 +46,9 @@ const page = () => {
           <p className="text-secondary mb-3 text-lg cursor-pointer"># faq</p>
         </div>
       </div>
+
+      <p>Extra text comes here...</p>
+      <button className="bg-amber-500 rounded px-3 py-2 text-black mt-4"><Link href="/public/position/pos1">Next and final practice tests...</Link></button>
     </section>
   );
 };

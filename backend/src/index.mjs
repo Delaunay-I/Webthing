@@ -9,8 +9,8 @@ import "./databse/index.mjs";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-app.use(productsRouter);
 app.use(express.json())
+
+app.use("/api/products", productsRouter);
 
 app.listen(PORT, console.log(`Running on port ${PORT}`));

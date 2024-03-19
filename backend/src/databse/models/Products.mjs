@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 
 const productSchema = mongoose.Schema({
-  item: String,
-  num: Number,
+  name: String,
+  price: Number,
+  size: String
 });
 
 export default mongoose.model("products", productSchema);

@@ -1,19 +1,30 @@
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 
 import productsRouter from "./routes/products.mjs";
 import usersRouter from "./routes/users.mjs";
 
 dotenv.config();
 
-import "./databse/index.mjs";
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use((req, res, next) => {
+  console.log(req.path, req.method);
+  next();
+});
 
 app.use("/api/products", productsRouter);
 app.use("/auth/users", usersRouter);
 
-app.listen(PORT, console.log(`Running on port ${PORT}`));
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() =>
+    app.listen(
+      PORT,
+      console.log(`Connected to db and listening on port ${PORT}`),
+    ),
+  )
+  .catch((err) => console.log(err.message));

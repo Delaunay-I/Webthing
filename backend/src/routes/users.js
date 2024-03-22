@@ -1,13 +1,13 @@
 import { Router } from "express";
 
-import { hashPassword, comparePassword } from "../utils/helpers.mjs";
-import User from "../databse/models/Users.mjs";
+import { hashPassword, comparePassword } from "../utils/helpers.js";
+import User from "../databse/models/userModel.js";
 
 const router = Router();
 
 router.get("/", async (req, res) => {
-  const users = await User.find({});
-  res.status(200).send(users);
+  const users = await User.find({}).sort({ createdAt: -1 });
+  res.status(200).json(users);
 });
 
 router.post("/", async (req, res) => {
@@ -17,10 +17,10 @@ router.post("/", async (req, res) => {
 
   try {
     const savedUser = await newUser.save();
-    return res.status(201).send(savedUser);
+    res.status(201).send(savedUser);
   } catch (error) {
     console.log(error);
-    return res.sendStatus(400);
+    res.sendStatus(400);
   }
 });
 

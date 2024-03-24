@@ -6,6 +6,8 @@ import session from "express-session";
 
 // importing routes
 import routes from "./routes/index.js";
+import passport from "passport";
+import "./strategies/local-strategy.js"
 
 dotenv.config();
 
@@ -19,14 +21,18 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  saveUninitialized: false,
-  resave: false,
-  cookie: {
-    maxAge: 60000 * 60,
-  }
-}));
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+      maxAge: 60000 * 60,
+    },
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(routes);
 
 mongoose
@@ -39,11 +45,10 @@ mongoose
   )
   .catch((err) => console.log(err.message));
 
-
 app.get("/", (req, res) => {
-  console.log(req.session)
-  console.log(req.session.id)
-  req.session.visited = true
+  console.log(req.session);
+  console.log(req.session.id);
+  req.session.visited = true;
 
-  res.status(200).send("hello there!")
-})
+  res.status(200).send("hello there!");
+});

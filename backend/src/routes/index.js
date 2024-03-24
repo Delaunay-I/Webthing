@@ -5,7 +5,7 @@ import usersRouter from "./users.js";
 const router = Router()
 
 router.use("/api/products", productsRouter);
-router.use("/auth/users", usersRouter);
+router.use("/api/auth", usersRouter);
 
 
 export default router;

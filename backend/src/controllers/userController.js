@@ -1,4 +1,6 @@
 import User from "../databse/models/userModel.js";
+import session from "express-session";
+
 import { hashPassword, comparePassword } from "../utils/helpers.js";
 
 export const getUsers = async (req, res) => {
@@ -19,16 +21,10 @@ export const postUser = async (req, res) => {
   }
 };
 
-export const loginUser = async (req, res) => {
-  const { password, username } = req.body;
-  try {
-    const findUser = await User.findOne({ username });
-    if (!findUser) throw new Error("User not found!");
-    if (!comparePassword(password, findUser.password))
-      throw new Error("passwords do not match");
-    res.status(200).send("passwords match!");
-  } catch (error) {
-    console.log(error);
-    res.sendStatus(404);
-  }
+export const loginUser = (req, res) => {
+  res.sendStatus(200);
+};
+
+export const checkStatus = (req, res) => {
+  return req.user ? res.send(req.user) : res.sendStatus(401);
 };

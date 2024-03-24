@@ -2,10 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
+import session from "express-session";
 
 // importing routes
-import productsRouter from "./routes/products.js";
-import usersRouter from "./routes/users.js";
+import routes from "./routes/index.js";
 
 dotenv.config();
 
@@ -19,8 +19,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/products", productsRouter);
-app.use("/auth/users", usersRouter);
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  saveUninitialized: false,
+  resave: false,
+  cookie: {
+    maxAge: 60000 * 60,
+  }
+}));
+app.use(routes);
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -31,3 +38,12 @@ mongoose
     )
   )
   .catch((err) => console.log(err.message));
+
+
+app.get("/", (req, res) => {
+  console.log(req.session)
+  console.log(req.session.id)
+  req.session.visited = true
+
+  res.status(200).send("hello there!")
+})

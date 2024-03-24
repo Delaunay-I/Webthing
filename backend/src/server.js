@@ -7,7 +7,8 @@ import session from "express-session";
 // importing routes
 import routes from "./routes/index.js";
 import passport from "passport";
-import "./strategies/local-strategy.js"
+import "./strategies/local-strategy.js";
+import MongoStore from "connect-mongo";
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.use(
     cookie: {
       maxAge: 60000 * 60,
     },
+    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }),
   })
 );
 app.use(passport.initialize());

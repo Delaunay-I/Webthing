@@ -21,8 +21,16 @@ export const postUser = async (req, res) => {
   }
 };
 
-export const loginUser = (req, res) => {
+export const login = (req, res) => {
   res.sendStatus(200);
+};
+
+export const logout = (req, res) => {
+  if (!req.user) return res.sendStatus(401);
+  req.logout((err) => {
+    if (err) return res.sendStatus(400);
+    res.sendStatus(200);
+  });
 };
 
 export const checkStatus = (req, res) => {

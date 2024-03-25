@@ -12,7 +12,7 @@ const Nav = async () => {
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <div>
           <a href="/" className="flex items-center space-x-2">
-            <Image src={logo} alt="icon" width={50} />
+            <Image src={logo} alt="icon" width={50} priority/>
             <span>my app</span>
           </a>
         </div>

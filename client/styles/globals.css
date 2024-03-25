@@ -16,6 +16,8 @@
   }
 }
 
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -35,8 +37,29 @@ main {
   padding: 0 24px 60px 24px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .form-elements {
+    @apply grid grid-cols-[100px_1fr]
+  }
+
+  .form-elements input {
+    @apply text-black px-2 py-1 rounded-sm outline-none
+  }
 }
+
+

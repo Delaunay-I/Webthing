@@ -1,5 +1,4 @@
 import User from "../databse/models/userModel.js";
-import session from "express-session";
 
 import { hashPassword, comparePassword } from "../utils/helpers.js";
 

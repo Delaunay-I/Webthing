@@ -6,14 +6,10 @@
   color: hsl(292, 42%, 14%);
 }
 
-main {
-  padding: 0 0 0 0;
+.main {
   background-color: hsl(275, 100%, 97%);
 }
 
-body {
-  background-color: hsl(275, 100%, 97%);
-}
 
 .bg-image {
   background-image: url("../../../../public/practices/04/background-pattern-desktop.svg");

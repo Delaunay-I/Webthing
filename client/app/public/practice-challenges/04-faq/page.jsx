@@ -11,7 +11,7 @@ const wsans = Work_Sans({ subsets: ["latin"] });
 
 const page = () => {
   return (
-    <div className="h-lvh">
+    <div className="h-lvh main">
       <Image
         src="/practices/04/background-pattern-desktop.svg"
         alt="background-image"

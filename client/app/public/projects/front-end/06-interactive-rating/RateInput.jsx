@@ -22,6 +22,7 @@ const RateInput = ({ rating, setRating, setSubmit }) => {
       <div className="flex justify-between">
         {nums.map((num) => (
           <button
+          key={num}
             className={`${rating >= num ? `${styles.bg_selected} text-white` : `${styles.bg_secondary} ${styles.text_primary}`} rounded-full  px-5  py-3`}
             onClick={(prev) => setRating(num)}
           >

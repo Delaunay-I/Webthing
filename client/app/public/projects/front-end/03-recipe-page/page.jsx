@@ -7,7 +7,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 const page = () => {
   return (
-    <div className="mx-auto mt-12 w-fit">
+    <div className="mx-auto mt-20 w-fit">
       <div
         className={`flex w-[280px] sm:w-[450px]  flex-col gap-4 sm:rounded-xl rose-white px-6 pb-3 sm:p-6 text-black ${outfit.className}`}
       >
@@ -18,10 +18,10 @@ const page = () => {
           alt="omelette image"
           className="rounded-lg mx-[-24px] sm:mx-0"
         />
-        <h1 className={`brown text-2xl ${yserif.className}`}>
+        <h1 className={`brown text-3xl ${yserif.className}`}>
           Simple Omelette Recipe
         </h1>
-        <p className="dark-charocal text-[10px]">
+        <p className="dark-charocal text-[14px]">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
@@ -44,7 +44,7 @@ const page = () => {
           <h2 className={`dark-rasbperry text-xl ${yserif.className}`}>
             Ingredients
           </h2>
-          <ul className="weng-brown spa list-inside list-disc space-y-2 px-2 pt-2 text-xs">
+          <ul className="weng-brown spa list-inside list-disc space-y-2 px-2 pt-2 text-sm">
             <li>2-3 large eggs</li>
             <li>Salt, to taste</li>
             <li>Pepper, to taste</li>

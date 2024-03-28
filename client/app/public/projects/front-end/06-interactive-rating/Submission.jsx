@@ -4,7 +4,7 @@ const Submission = ({ rating }) => {
   return (
     <div className={`${styles.bg_card} flex flex-col items-center gap-5 rounded-3xl p-8 sm:w-[430px]`}>
       <img
-        src="/projects/06/illustration-thank-you.svg"
+        src="/frontend-projects/06/illustration-thank-you.svg"
         alt="submission image"
         className="w-[170px] mb-3 pt-4"
       />

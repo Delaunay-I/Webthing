@@ -1,9 +1,12 @@
+
+
 import Image from "next/image";
 import Link from "next/link";
 import { getServerSession } from "next-auth";
 
 import logo from "@public/logo.svg";
 import { options } from "../app/api/auth/[...nextauth]/options";
+import MyMenu from "./MyMenu";
 
 const Nav = async () => {
   const session = await getServerSession(options);
@@ -24,6 +27,7 @@ const Nav = async () => {
           <Link href="/public">Public</Link>
           {session ? (<Link href="/api/auth/signout?callbackUrl=/">Logout</Link>) : (<Link href="/api/auth/signin?callbackUrl=/">Login</Link>)}
         </div>
+        <MyMenu/>
       </div>
     </nav>
   );

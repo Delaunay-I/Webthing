@@ -8,38 +8,40 @@ const Home = () => {
       <div className="grid grid-cols-4 gap-2">
         <Link
           href="/public/layouts"
-          className="bg-amber-600 px-3 py-3 rounded-2xl shadow-lg
-        hover:opacity-80  text-white font-bold
-        transition"
+          className="rounded-2xl bg-amber-600 px-3 py-3 font-bold
+        text-white  shadow-lg transition
+        hover:opacity-80"
         >
           Layouts
         </Link>
 
         <Link
           href="/public/grid"
-          className="bg-amber-600 px-3 py-3 rounded-2xl shadow-lg
-      hover:opacity-80  text-white font-bold 
-      transition"
+          className="rounded-2xl bg-amber-600 px-3 py-3 font-bold
+      text-white  shadow-lg transition 
+      hover:opacity-80"
         >
           Grid
         </Link>
 
         <Link
           href="/public/position"
-          className="bg-amber-600 px-3 py-3 rounded-2xl shadow-lg
-      hover:opacity-80  text-white font-bold 
-      transition"
+          className="rounded-2xl bg-amber-600 px-3 py-3 font-bold
+      text-white  shadow-lg transition 
+      hover:opacity-80"
         >
           Position
         </Link>
 
-        <Link href="/ecom" className="bg-amber-600 px-3 py-3 rounded-2xl shadow-lg
-      hover:opacity-80  text-white font-bold 
-      transition">
-        <button>Ecom page</button>
+        <Link
+          href="/ecom"
+          className="rounded-2xl bg-amber-600 px-3 py-3 font-bold
+      text-white  shadow-lg transition 
+      hover:opacity-80"
+        >
+          <button>Ecom page</button>
         </Link>
       </div>
-
 
     </section>
   );

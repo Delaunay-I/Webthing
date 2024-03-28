@@ -7,7 +7,7 @@ const RateInput = ({ rating, setRating, setSubmit }) => {
     <div className={`${styles.bg_card} flex flex-col gap-7 rounded-3xl p-8 sm:w-[430px]`}>
       <div className={`w-fit grow-0 rounded-full ${styles.bg_secondary} p-3`}>
         <img
-          src="/projects/06/icon-star.svg"
+          src="/frontend-projects/06/icon-star.svg"
           alt="star icon"
           className="w-[15px]"
         />

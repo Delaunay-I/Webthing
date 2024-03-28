@@ -18,7 +18,7 @@ const Collapsible = ({ title, body }) => {
         </p>
         {isOpen ? (
           <Image
-            src="/practices/04/icon-minus.svg"
+            src="/frontend-projects/04/icon-minus.svg"
             width={25}
             height={25}
             alt="minus icon to close the bullet point"
@@ -26,7 +26,7 @@ const Collapsible = ({ title, body }) => {
           />
         ) : (
           <Image
-            src="/practices/04/icon-plus.svg"
+            src="/frontend-projects/04/icon-plus.svg"
             width={25}
             height={25}
             alt="minus icon to close the bullet point"

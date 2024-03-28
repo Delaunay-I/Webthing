@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div className="h-lvh main">
       <Image
-        src="/practices/04/background-pattern-desktop.svg"
+        src="/frontend-projects/04/background-pattern-desktop.svg"
         alt="background-image"
         width={600}
         height={200}
@@ -24,7 +24,7 @@ const page = () => {
         <div className="mx-6 mt-[-100px] flex w-auto min-w-[300px] max-w-[550px] flex-col gap-4 rounded-lg bg-white p-8">
           <div className="flex items-center gap-5 mb-2 md:mb-6">
             <Image
-              src="/practices/04/icon-star.svg"
+              src="/frontend-projects/04/icon-star.svg"
               width={35}
               height={35}
               alt="star icon"

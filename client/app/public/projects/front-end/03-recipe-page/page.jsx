@@ -1,11 +1,7 @@
 import Image from "next/image";
 import "./styles.css";
-import { Young_Serif, Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
 
-const yserif = Young_Serif({
-  subsets: ["latin"],
-  weight: "400",
-});
 const outfit = Outfit({ subsets: ["latin"] });
 
 const page = () => {
@@ -21,7 +17,7 @@ const page = () => {
           alt="omelette image"
           className="mx-[-24px] rounded-lg sm:mx-0"
         />
-        <h1 className={`brown text-3xl ${yserif.className}`}>
+        <h1 className="brown text-3xl font-youngSerif">
           Simple Omelette Recipe
         </h1>
         <p className="dark-charocal text-[14px]">
@@ -44,7 +40,7 @@ const page = () => {
           </ul>
         </div>
         <div>
-          <h2 className={`dark-rasbperry text-xl ${yserif.className}`}>
+          <h2 className="dark-rasbperry text-xl font-youngSerif">
             Ingredients
           </h2>
           <ul className="weng-brown spa list-inside list-disc space-y-2 px-2 pt-2 text-sm">
@@ -59,7 +55,7 @@ const page = () => {
         </div>
         <hr />
         <div>
-          <h2 className={`dark-rasbperry text-xl ${yserif.className}`}>
+          <h2 className="dark-rasbperry text-xl font-youngSerif">
             Instructions
           </h2>
         </div>

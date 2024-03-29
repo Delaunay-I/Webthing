@@ -2,21 +2,24 @@ import Image from "next/image";
 import "./styles.css";
 import { Young_Serif, Outfit } from "next/font/google";
 
-const yserif = Young_Serif({ subsets: ["latin"], weight: "400" });
+const yserif = Young_Serif({
+  subsets: ["latin"],
+  weight: "400",
+});
 const outfit = Outfit({ subsets: ["latin"] });
 
 const page = () => {
   return (
     <div className="mx-auto mt-20 w-fit">
       <div
-        className={`flex w-[280px] sm:w-[450px]  flex-col gap-4 sm:rounded-xl rose-white px-6 pb-3 sm:p-6 text-black ${outfit.className}`}
+        className={`rose-white flex w-[280px]  flex-col gap-4 px-6 pb-3 text-black sm:w-[450px] sm:rounded-xl sm:p-6 ${outfit.className}`}
       >
         <Image
           src="/image-omelette.jpeg"
           width={400}
           height={300}
           alt="omelette image"
-          className="rounded-lg mx-[-24px] sm:mx-0"
+          className="mx-[-24px] rounded-lg sm:mx-0"
         />
         <h1 className={`brown text-3xl ${yserif.className}`}>
           Simple Omelette Recipe

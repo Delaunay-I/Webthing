@@ -4,7 +4,7 @@ import { results } from "./index";
 const SummaryComponent = () => {
   return (
     <div className="h-screen items-center justify-center sm:flex ">
-      <div className="grid sm:rounded-[30px] bg-white text-black sm:w-[600px] sm:auto-cols-fr sm:grid-flow-col">
+      <div className="h-full sm:h-auto grid sm:rounded-[30px] bg-white text-black sm:w-[600px] sm:auto-cols-fr sm:grid-flow-col">
         <div className="text-pale-blue flex flex-col items-center justify-between gap-5 rounded-b-[30px] sm:rounded-[26px] bg-gradient-to-b from-[#7857ff] to-[#2e2be9] p-8 px-10 sm:gap-0">
           <h2 className="text-lg font-semibold">Your Result</h2>
           <div className="flex flex-col items-center justify-center rounded-full bg-gradient-to-b from-[#4e21ca] to-[#2421CA00] px-8 py-6 sm:px-12 sm:py-9">

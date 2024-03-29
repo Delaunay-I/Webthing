@@ -2,7 +2,7 @@ import styles from "./irc.module.css";
 
 const Submission = ({ rating }) => {
   return (
-    <div className={`${styles.bg_card} flex flex-col items-center gap-5 rounded-3xl p-8 sm:w-[430px]`}>
+    <div className={`${styles.bg_card} h-full sm:h-auto  flex flex-col items-center gap-5 sm:rounded-3xl p-8 sm:w-[430px]`}>
       <img
         src="/frontend-projects/06/illustration-thank-you.svg"
         alt="submission image"

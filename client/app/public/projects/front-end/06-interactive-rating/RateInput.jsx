@@ -4,7 +4,7 @@ const nums = [1, 2, 3, 4, 5];
 
 const RateInput = ({ rating, setRating, setSubmit }) => {
   return (
-    <div className={`${styles.bg_card} flex flex-col gap-7 rounded-3xl p-8 sm:w-[430px]`}>
+    <div className={`${styles.bg_card} h-full sm:h-auto flex flex-col gap-7 sm:rounded-3xl p-8 sm:w-[430px]`}>
       <div className={`w-fit grow-0 rounded-full ${styles.bg_secondary} p-3`}>
         <img
           src="/frontend-projects/06/icon-star.svg"

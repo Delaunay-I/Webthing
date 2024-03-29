@@ -3,8 +3,8 @@ import "./styles.css";
 
 const page = () => {
   return (
-    <div className="primary-yellow h-screen mx-[-25px] py-24 ">
-      <div className="box-shadow mt-24 mx-auto flex  w-[384px] flex-col gap-6 rounded-2xl border border-black bg-white p-6 text-black ">
+    <div className="primary-yellow h-full py-24">
+      <div className="box-shadow mt-24 mx-auto flex min-w-[275px] max-w-[384px] flex-col gap-6 rounded-2xl border border-black bg-white p-6 text-black ">
         <Image
           src="/illustration-article.svg"
           width={336}

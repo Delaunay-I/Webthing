@@ -3,63 +3,43 @@
 import { Menu, MenuItem, MenuButton, SubMenu } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
-import Link from "next/link";
 
-const MyMenuItem = ({ link, title }) => {
-  return (
-    <Link href={`/public/projects/front-end/${link}`}>
-      <MenuItem>{title}</MenuItem>
-    </Link>
-  );
-};
+// NextAuth
+// import { getServerSession } from "next-auth";
+// import { options } from "../app/api/auth/[...nextauth]/options";
+
+import { publicProjects } from "./index.js";
 
 const MyMenu = () => {
+  // const session = await getServerSession(options);
+
   return (
-    <Menu
-      menuButton={<MenuButton>Menu</MenuButton>}
-      
-    >
-      <MenuItem>New File</MenuItem>
-      <MenuItem>Save</MenuItem>
+    <Menu menuButton={<MenuButton>Menu</MenuButton>}>
+      <SubMenu label="login">
+        <MenuItem href="/login">Express</MenuItem>
+        {/* {session ? (
+          <MenuItem href="/api/auth/signout?callbackUrl=/">
+            nextAuth Logout
+          </MenuItem>
+        ) : (
+          <MenuItem href="/api/auth/signin?callbackUrl=/">
+            nextAuth Login
+          </MenuItem>
+        )} */}
+      </SubMenu>
+
+      <MenuItem href="/profile">Profile</MenuItem>
+      <MenuItem href="/ClientProfile">Client Profile</MenuItem>
+      <MenuItem href="/public">Public</MenuItem>
+
       <SubMenu label="Projects">
         <SubMenu label="Front-end" overflow="auto">
-          <MyMenuItem link="01-qrcode" title="01. QR Code" />
-          <MyMenuItem link="02-blogpreviewcard" title="02. Blog Preview Card" />
-          <MyMenuItem link="03-recipe-page" title="03. Recipe Page" />
-          <MyMenuItem link="04-faq" title="04. FAQ" />
-          <MyMenuItem link="05-result-summary" title="05. Result Summary" />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
-          <MyMenuItem
-            link="06-interactive-rating"
-            title="06. Interactive Rating"
-          />
+          {publicProjects.map((item, index) => (
+            <MenuItem
+              key={index}
+              href={item.path}
+            >{`${index + 1}. ${item.title}`}</MenuItem>
+          ))}
         </SubMenu>
       </SubMenu>
     </Menu>

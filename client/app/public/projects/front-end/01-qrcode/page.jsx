@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="my-32 flex justify-center">
+    <div className="h-screen py-32">
+    <div className="flex justify-center">
       <div className="flex w-[300px] flex-col items-center gap-5 rounded-2xl bg-neutral-100 px-3 pb-8 pt-3">
         <Image
           src="/image-qr-code.png"
@@ -19,6 +20,7 @@ const page = () => {
           to the next level
         </p>
       </div>
+    </div>
     </div>
   );
 };

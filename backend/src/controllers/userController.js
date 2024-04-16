@@ -1,4 +1,5 @@
 import User from "../databse/models/userModel.js";
+import mongoose from "mongoose";
 
 import { hashPassword, comparePassword } from "../utils/helpers.js";
 
@@ -6,6 +7,24 @@ export const getUsers = async (req, res) => {
   const users = await User.find({}).sort({ createdAt: -1 });
   res.status(200).json(users);
 };
+
+export const getUserById = async (req, res) => {
+  const { id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.sendStatus(404)
+    return res.json({ error: "no such user" });
+  }
+  const user = await User.findById(id);
+  if (!user) {
+    res.status(404)
+    return res.json({ error: "no such user" });
+  }
+
+  res.status(200)
+  res.json(user);
+};
+
+
 export const postUser = async (req, res) => {
   const { body } = req;
   body.password = hashPassword(body.password);

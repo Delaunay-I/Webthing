@@ -4,7 +4,7 @@ import User from "../databse/models/userModel.js";
 jest.mock("../databse/models/userModel.js");
 
 const req = {
-  params: { id: "59b99db4cfa9a34dcd7885b9" },
+  params: { id: "59b99db4cfa9a34dcd7885b4" },
 };
 
 const res = {
@@ -23,20 +23,20 @@ describe("get users", () => {
 
   it("should send a status code of 200 when the user is found", async () => {
     User.findById.mockReturnValue({
-      id: "59b99db4cfa9a34dcd7885b9",
+      id: req.params.id,
       username: "username",
       email: "email",
       password: "password",
     });
     await getUserById(req, res);
-    expect(User.findById).toHaveBeenCalledWith("59b99db4cfa9a34dcd7885b9");
+    expect(User.findById).toHaveBeenCalledWith(req.params.id);
     expect(User.findById).toHaveReturnedWith({
-      id: "59b99db4cfa9a34dcd7885b9",
+      id: req.params.id,
       username: "username",
       email: "email",
       password: "password",
-    })
+    });
     expect(res.status).toHaveBeenCalledWith(200);
-    expect(res.json).toHaveBeenCalledTimes(1)
+    expect(res.json).toHaveBeenCalledTimes(1);
   });
 });

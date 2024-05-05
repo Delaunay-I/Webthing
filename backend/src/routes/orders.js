@@ -1,13 +1,19 @@
 import { Router } from "express";
-import { getOrderById, getOrders, postOrder } from "../controllers/orderControllers.js";
+import {
+  getCustomerOrder,
+  getOrderById,
+  getOrders,
+  postOrder,
+  updateOrder,
+} from "../controllers/orderControllers.js";
 
 const router = Router();
 
 router.get("/", getOrders);
-router.get("/:id", getOrderById);
-// router.get("/:customerName", getCustomerOrder);
+router.get("/customer/:customerName", getCustomerOrder);
+router.get("/id/:id", getOrderById);
 router.post("/", postOrder);
-// router.patch("/:id", updateOrder);
+router.patch("/:id", updateOrder);
 // router.delete("/:id", deleteOrder);
 
 export default router;

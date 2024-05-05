@@ -11,7 +11,8 @@ module.exports = {
         arial: ['arial', "sans-serif"],
         tahoma: ['Tahoma'],
         verdana: ['Verdana'],
-        youngSerif: ['"Young Serif"', "sans-serif"]
+        youngSerif: ['"Young Serif"', "sans-serif"],
+        'roboto': ['Roboto', 'sans-serif'],
       },
       colors: {
         'secondary': 'rgb(170, 170, 170) ',

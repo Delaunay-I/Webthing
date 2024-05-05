@@ -16,6 +16,24 @@
   }
 }
 
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/Roboto-Bold.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Roboto-Regular.ttf) format('truetype');
+  }
+}
+
 
 
 body {
@@ -38,7 +56,6 @@ main {
   background: #093028;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 
 
 }
@@ -67,5 +84,8 @@ input[type=number] {
     @apply text-black px-2 py-1 rounded-sm outline-none
   }
 }
+
+
+
 
 

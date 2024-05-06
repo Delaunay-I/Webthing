@@ -10,7 +10,7 @@ const Nav = () => {
         <div>
           <a href="/" className="flex items-center space-x-2">
             <Image src={logo} alt="icon" width={50} priority />
-            <span>my app</span>
+            <span className="font-bold text-4xl font-[roboto] text-amber-100">Webthing</span>
           </a>
         </div>
         

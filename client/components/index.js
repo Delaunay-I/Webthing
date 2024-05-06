@@ -29,4 +29,9 @@ export const publicProjects = [
     title: "Interactive Rating",
     level: "newbie",
   },
+  {
+    path: "/public/projects/front-end/07-newsletter-signup",
+    title: "Newsletter sign-up",
+    level: "junior",
+  },
 ];

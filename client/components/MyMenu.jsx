@@ -14,7 +14,13 @@ const MyMenu = () => {
   // const session = await getServerSession(options);
 
   return (
-    <Menu menuButton={<MenuButton>Menu</MenuButton>}>
+    <Menu
+      menuButton={
+        <MenuButton className="text-xl font-semibold text-amber-100 hover:opacity-90">
+          Menu
+        </MenuButton>
+      }
+    >
       <SubMenu label="login">
         <MenuItem href="/login">Express</MenuItem>
         {/* {session ? (

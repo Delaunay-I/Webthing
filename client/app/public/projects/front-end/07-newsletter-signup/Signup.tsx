@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import { SetStateAction, Dispatch } from "react";
 
 import style from "./news.module.css";
 import { points } from "./constants";
@@ -9,6 +8,12 @@ import { useState } from "react";
 type Errors = {
   email?: string | null;
 };
+
+interface SignupProps {
+  email: string;
+  setEmail: Dispatch<SetStateAction<string>>;
+  setSubscribe: Dispatch<SetStateAction<boolean>>;
+}
 
 const validateEmail = (email: string) => {
   const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -24,8 +29,7 @@ const validateEmail = (email: string) => {
   return null;
 };
 
-const NewsLetter = () => {
-  const [email, setEmail] = useState("");
+const Signup: React.FC<SignupProps> = ({ email, setEmail, setSubscribe }) => {
   const [errors, setErrors] = useState<Errors>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,9 +39,15 @@ const NewsLetter = () => {
     e.preventDefault();
     const error = validateEmail(email);
     setErrors({ email: error });
+
+    // If there weren't any erros from emailValidate, then set the email and submit the form
+    if (!error) {
+      setEmail(email);
+      setSubscribe(true);
+    }
   };
   return (
-    <div className="flex w-full flex-col-reverse items-center justify-between bg-white pb-10 sm:max-w-[650px] sm:flex-row sm:rounded-3xl sm:p-5 md:max-w-[750px] lg:max-w-[900px]">
+    <div className="flex w-full h-screen sm:h-fit flex-col-reverse items-center justify-end bg-white pb-10 sm:max-w-[650px] sm:flex-row sm:rounded-3xl sm:p-5 md:max-w-[750px] lg:max-w-[900px]">
       <div
         className={`mx-2 flex min-w-[250px] max-w-[450px] flex-col justify-center gap-3 pr-4 lg:mx-8 ${style.text_gray} font-[roboto] `}
       >
@@ -66,18 +76,22 @@ const NewsLetter = () => {
             >
               Email address
             </label>
-            {errors.email ? <p className="text-rose-500 text-xs font-semibold">{errors.email}</p> : null}
+            {errors.email ? (
+              <p className="text-xs font-semibold text-rose-500">
+                {errors.email}
+              </p>
+            ) : null}
           </div>
           <input
             type="email"
             id="email"
             placeholder="email@company.com"
-            className={`mb-2 w-full rounded-md border px-5 py-3 outline-none focus:border-slate-700 ${errors.email ? "bg-red-100 border-red-600 text-rose-500": ""}`}
+            className={`mb-2 w-full rounded-md border px-5 py-3 outline-none focus:border-slate-700 ${errors.email ? "border-red-600 bg-red-100 text-rose-500" : ""}`}
             onChange={handleChange}
           />
           <button
             type="submit"
-            className="mt-3 w-full rounded-md bg-slate-800 px-5 py-3 font-bold text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-orange-500"
+            className="mt-3 w-full rounded-md bg-slate-800 px-5 py-3 font-bold text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-orange-500 hover:shadow-lg hover:shadow-rose-500/45"
           >
             Subscribe to monthly newsletter
           </button>
@@ -104,4 +118,4 @@ const NewsLetter = () => {
   );
 };
 
-export default NewsLetter;
+export default Signup;

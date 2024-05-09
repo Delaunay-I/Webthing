@@ -34,4 +34,9 @@ export const publicProjects = [
     title: "Newsletter sign-up",
     level: "junior",
   },
+  {
+    path: "/public/projects/front-end/08-notifications-page",
+    title: "Notifications Page",
+    level: "junior",
+  },
 ];

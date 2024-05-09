@@ -12,7 +12,7 @@ module.exports = {
         tahoma: ['Tahoma'],
         verdana: ['Verdana'],
         youngSerif: ['"Young Serif"', "sans-serif"],
-        'roboto': ['Roboto', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
         'secondary': 'rgb(170, 170, 170) ',

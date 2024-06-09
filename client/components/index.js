@@ -39,4 +39,9 @@ export const publicProjects = [
     title: "Notifications Page",
     level: "junior",
   },
+  {
+    path: "/public/projects/front-end/09-testimonials-slider",
+    title: "Testimonials Slider",
+    level: "junior",
+  },
 ];

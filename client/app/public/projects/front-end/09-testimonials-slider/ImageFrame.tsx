@@ -17,12 +17,13 @@ const ImageFrame = ({ current, setCurrent }: props) => {
   };
 
   let xlImg = "xl:w-[600px] xl:h-[600px]";
-  let mdImg = "md:w-[350px] md:h-[350px]";
+  let mdImg = "md:w-[450px] md:h-[450px]";
+  let defImg = "w-[350px] h-[350px]";
 
 
   return (
-    <div className=" bg-testemonial-image bg-no-repeat bg-contain sm:p-12 xl:p-24"> 
-      <div className={`relative ${mdImg} ${xlImg}`}>
+    <div className="bg-testemonial-image bg-contain bg-no-repeat p-12 md:p-24 xl:p-24">
+      <div className={`relative ${defImg} ${mdImg} ${xlImg}`}>
         {data.map((item, index) => {
           if (current === index) {
             return (
@@ -32,7 +33,7 @@ const ImageFrame = ({ current, setCurrent }: props) => {
                 width={400}
                 height={100}
                 alt="profile picture"
-                className={`${mdImg} ${xlImg} rounded-lg object-cover object-top shadow-xl`}
+                className={`${defImg} ${mdImg} ${xlImg} rounded-lg object-cover object-top shadow-xl`}
               />
             );
           }

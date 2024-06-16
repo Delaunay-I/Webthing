@@ -3,17 +3,16 @@ import Testimonials from "./Testimonials";
 
 const page = () => {
   return (
-    <div className="flex min-h-[92vh] items-center justify-center bg-white text-black">
-      <div className="relative w-full min-h-[92vh]">
-
-      <Testimonials />
-      <Image
-        src="/frontend-projects/09/pattern-curve.svg"
-        width={500}
-        height={100}
-        alt="curve pattern"
-        className="absolute bottom-0 left-0 xl:w-[1000px]"
-      />
+    <div className=" min-h-[92vh]  bg-white text-black">
+      <div className="relative min-h-[92vh] w-full items-center justify-center md:flex">
+        <Testimonials />
+        <Image
+          src="/frontend-projects/09/pattern-curve.svg"
+          width={500}
+          height={100}
+          alt="curve pattern"
+          className="absolute bottom-0 left-0 md:w-[800px] xl:w-[1000px]"
+        />
       </div>
     </div>
   );

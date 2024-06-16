@@ -17,6 +17,9 @@ module.exports = {
       colors: {
         'secondary': 'rgb(170, 170, 170) ',
       },
+      backgroundImage: {
+        'testemonial-image': "url('../public/frontend-projects/09/pattern-bg.svg')",
+      }
     },
   },
   plugins: [],

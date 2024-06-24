@@ -1,0 +1,106 @@
+.parentComponent {
+  background-color: #fafafa;
+  color: black;
+  min-height: 100vh;
+  overflow: auto;
+  
+  padding: 50px 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  .parentComponent {
+    min-width: 980px;
+  }
+}
+
+.sectionComp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionComp .header-1 {
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.sectionComp .header-2 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.sectionComp .body {
+  font-size: small;
+  color: #b1b1b4;
+  text-align: center;
+
+  width: 400px;
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+
+.cardFeatSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (min-width: 720px) {
+  .cardFeatSection {
+    flex-direction: row;
+  }
+}
+
+.supervisor {
+    border-top: 5px solid rgb(66, 212, 211);
+} 
+.team-builder {
+    border-top: 5px solid rgb(238, 82, 82);
+
+}
+
+.karma {
+    border-top: 5px solid rgb(254, 173, 71);
+
+}
+.calculator {
+    border-top: 5px solid rgb(81, 157, 243);
+
+}
+
+.featureCard {
+  position: relative;
+
+  width: 300px;
+  height: 220px;
+
+  padding: 20px 20px;
+  border-radius: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCard p {
+    color: #b1b1b4;
+    font-size: small;
+}
+
+.cardFeatSection div {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.cardImage {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

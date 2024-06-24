@@ -44,4 +44,9 @@ export const publicProjects = [
     title: "Testimonials Slider",
     level: "junior",
   },
+  {
+    path: "/public/projects/front-end/10-fourcard-feature",
+    title: "Four card feature section",
+    level: "newbie",
+  },
 ];
